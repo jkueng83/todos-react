@@ -7,7 +7,7 @@ export class Todolist extends Component {
     getAllTodos(){
         let widgets = [];
         this.props.todos.forEach(todo => {
-            widgets.push(<Todo title={todo.name} isDone={todo.done}/>)
+            widgets.push(<Todo title={todo.title} isDone={todo.done} id={todo.id} onDelete={this.props.onDelete}/>)
             
         });
         return widgets;
